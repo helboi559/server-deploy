@@ -9,8 +9,8 @@ router.get('/', function(req, res, next) {
 router.post('/post-message', function(req,res) {
   const clientMsg = req.body.clientMessage
   const dateTime = new Date()
-  const serverRes = `Received client message: ${clientMsg}. Responded at ${dateTime.toString()}`
-  res.json({message:serverRes})
+  const serverMessage = `Received client message: ${clientMsg}. Responded at ${dateTime.toString()}`
+  res.json({serverMessage:serverMessage})
 })
 
 module.exports = router;
